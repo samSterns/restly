@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
 
-const Form = ({ form }) => (
+const ApiForm = ({ apiForm }) => (
     <div id="root">
         <header>
             <h1>RESTy</h1>
@@ -64,12 +64,14 @@ const Form = ({ form }) => (
     </div>
 )
 
-Form.propTypes = {
+ApiForm.propTypes = {
     form: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        frequency: PropTypes.number.isRequired
+        url: PropTypes.string.isRequired,
+        method:PropTypes.string.isRequired,
+        requestBody: PropTypes.string.isRequired,
+        authusernname: PropTypes.string.isRequired,
+        authpassword: PropTypes.string.isRequired,
     }).isRequired
     };
     
-    export default Form;
+    export default ApiForm;

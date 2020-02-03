@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 
-const Response = ({ response }) => (
+const ApiResponse = ({ ApiResponse }) => (
 <div id="json">
     <div class="react-json-view" style="font-family: monospace; cursor: default; background-color: rgba(0, 0, 0, 0); position: relative">
         <div class="pretty-json-container">
@@ -33,11 +33,9 @@ const Response = ({ response }) => (
     </div>
 </div>
 
-Response.propTypes = {
+Api.Response.propTypes = {
     response: PropTypes.shape({
-        url: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        frequency: PropTypes.number.isRequired
+        url: PropTypes.string.isRequired
     }).isRequired
     };
     
